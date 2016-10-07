@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <obliv.oh>
+#include <stdlib.h>
+#include "dbg.h"
+
+#include "division.h"
+
+void division(void* args){
+     protocolIO *io = args;
+
+     obliv int ox = feedOblivInt(io->n, 1);
+     obliv int oy = feedOblivInt(io->n, 2);
+
+     revealOblivInt(&io->res,ox/oy,0);
+}
